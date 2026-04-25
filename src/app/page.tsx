@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
-import { WheelScene3DWrapper } from "@/components/home/WheelScene3DWrapper";
+import { Manifesto } from "@/components/home/Manifesto";
 import { FeaturedServices } from "@/components/home/FeaturedServices";
 import { BrandStrip } from "@/components/home/BrandStrip";
 import { AboutSection, CallToAction } from "@/components/home/CallToAction";
@@ -14,7 +14,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <WheelScene3DWrapper />
+        <Manifesto />
         <FeaturedServices />
         <BrandStrip />
         <AboutSection />
