@@ -81,7 +81,6 @@ function SceneLabels({ scrollProgress }: { scrollProgress: number }) {
           position={position}
           fontSize={0.35}
           color="#F5F7FA"
-          font="/fonts/Syne-Bold.ttf"
           anchorX="center"
           anchorY="middle"
           material-transparent
