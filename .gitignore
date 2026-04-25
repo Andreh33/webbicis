@@ -56,3 +56,5 @@ public/uploads/products/*.webp
 !public/uploads/products/.gitkeep
 
 /src/generated/prisma
+
+.vercel

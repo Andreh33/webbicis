@@ -13,7 +13,10 @@ function resolveDbUrl(raw: string | undefined): string {
   return url;
 }
 
-const adapter = new PrismaLibSql({ url: resolveDbUrl(process.env.DATABASE_URL) });
+const adapter = new PrismaLibSql({
+  url: resolveDbUrl(process.env.DATABASE_URL),
+  authToken: process.env.TURSO_AUTH_TOKEN,
+});
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
