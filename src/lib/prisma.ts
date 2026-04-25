@@ -1,6 +1,6 @@
 import path from "path";
 import { PrismaLibSql } from "@prisma/adapter-libsql";
-import { PrismaClient } from "@/generated/prisma";
+import { PrismaClient } from "@/generated/prisma/client";
 
 function resolveDbUrl(raw: string | undefined): string {
   const url = raw ?? "file:./dev.db";

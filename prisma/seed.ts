@@ -1,7 +1,7 @@
 import "dotenv/config";
 import path from "path";
 import { PrismaLibSql } from "@prisma/adapter-libsql";
-import { PrismaClient } from "../src/generated/prisma/client.ts";
+import { PrismaClient } from "../src/generated/prisma/client";
 import bcrypt from "bcryptjs";
 
 function resolveDbUrl(raw: string | undefined): string {

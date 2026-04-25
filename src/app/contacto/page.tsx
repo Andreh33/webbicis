@@ -10,7 +10,17 @@ import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { Map } from "@/components/shared/Map";
 import { Marquee } from "@/components/layout/Marquee";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { MapPin, Phone, Mail, Instagram, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+
+function InstagramIcon({ size = 18, style }: { size?: number; style?: React.CSSProperties }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={style}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 
 const schema = z.object({
   name: z.string().min(2, "Nombre requerido"),
@@ -126,7 +136,7 @@ export default function ContactoPage() {
                       { icon: <MapPin size={18} style={{ color: "#1E5FFF" }} />, label: "Dirección", value: "Calle París 44, 08029 Barcelona", href: undefined },
                       { icon: <Phone size={18} style={{ color: "#1E5FFF" }} />, label: "Teléfono", value: "+34 678 297 995", href: "tel:+34678297995" },
                       { icon: <Mail size={18} style={{ color: "#1E5FFF" }} />, label: "Email", value: "info@oncycles.es", href: "mailto:info@oncycles.es" },
-                      { icon: <Instagram size={18} style={{ color: "#1E5FFF" }} />, label: "Instagram", value: "@oncycles", href: "https://instagram.com/oncycles" },
+                      { icon: <InstagramIcon size={18} style={{ color: "#1E5FFF" }} />, label: "Instagram", value: "@oncycles", href: "https://instagram.com/oncycles" },
                     ].map(({ icon, label, value, href }) => (
                       <div key={label} className="flex items-start gap-4">
                         <div className="mt-0.5 shrink-0">{icon}</div>

@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     await prisma.contactMessage.create({ data });
     return NextResponse.json({ success: true });
   } catch (err) {
-    if (err instanceof z.ZodError) return NextResponse.json({ error: err.errors }, { status: 400 });
+    if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 });
     return NextResponse.json({ error: "Error al enviar mensaje" }, { status: 500 });
   }
 }

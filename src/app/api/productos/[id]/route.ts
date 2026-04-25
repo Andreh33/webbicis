@@ -60,7 +60,7 @@ export async function PUT(req: NextRequest, { params }: RouteContext) {
 
     return NextResponse.json(product);
   } catch (err) {
-    if (err instanceof z.ZodError) return NextResponse.json({ error: err.errors }, { status: 400 });
+    if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 });
     return NextResponse.json({ error: "Error al actualizar" }, { status: 500 });
   }
 }
